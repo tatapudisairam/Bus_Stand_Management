@@ -1,0 +1,121 @@
+.ca-main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ececf4;
+}
+
+.ca-container {
+    display: flex;
+    width: 680px;
+    height: 450px;
+    background-color: #FFFFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.ca-left-container {
+    width: 50%;
+    margin: auto 0px;
+}
+
+.ca-inner-left-container {
+    margin: 0px 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.ca-inner-left-container p {
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #171A1FFF;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ca-input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    background: #F3F4F6FF;
+    padding: 4px 12px;
+    font-family: Roboto;
+    font-weight: 400;
+    border-radius: 2px;
+    outline: none;
+    margin: 3px 0;
+}
+
+.ca-input-div label {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.ca-input-div input {
+    font-size: 15px;
+    border: none;
+    background-color: #F3F4F6FF;
+}
+
+.ca-input-div input:focus {
+    outline: none;
+    color: rgb(37, 38, 40);
+}
+
+
+
+
+.ca-btn-create {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ca-btn-create .ca-btn {
+    cursor: pointer;
+    width: 100%;
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #5068E2FF;
+    opacity: 1;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0px 8px 17px #5068E226, 0px 0px 2px #5068E21F;
+}
+
+.ca-btn:hover {
+    background: #3753DEFF;
+}
+
+
+.ca-btn:hover:active {
+    background: rgb(30, 60, 209);
+}
+
+
+.ca-right-container {
+    width: 50%;
+    background-color: #5068E2FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ca-right-container img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

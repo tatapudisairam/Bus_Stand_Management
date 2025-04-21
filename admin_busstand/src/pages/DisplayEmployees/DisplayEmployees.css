@@ -1,0 +1,155 @@
+.de-main-container {
+    background-color: #ececf4;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+}
+
+.de-home-icon {
+    cursor: pointer;
+    color: #5068E2;
+    line-height: 66px;
+}
+
+.de-home-icon:hover {
+    opacity: 0.8;
+}
+
+.de-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.de-table th,
+.de-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.de-table th {
+    background-color: #e2e2e2;
+    font-weight: bold;
+}
+
+.de-table tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.de-search-filter-sort-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.de-search-input,
+.de-job-filter {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    min-width: 150px;
+}
+
+.de-search-input:focus,
+.de-job-filter:focus {
+    border-color: #5068E2;
+    box-shadow: 0 0 5px rgba(80, 104, 226, 0.5);
+}
+
+.de-sort-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.de-sort-buttons button {
+    background-color: #5068E2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    min-width: 130px;
+}
+
+.de-sort-buttons button:hover {
+    background-color: #3949ab;
+}
+
+
+.MuiPaginationItem-root {
+    background-color: #5068E2 !important;
+    color: white !important;
+    padding: 8px 14px !important;
+    cursor: pointer !important;
+    border-radius: 8px !important;
+    transition: background 0.3s ease !important;
+}
+
+.MuiPaginationItem-root:hover {
+    background-color: #3949ab !important;
+}
+
+.Mui-selected {
+    background-color: #3949ab !important;
+    color: white !important;
+    transform: scale(1.1) !important;
+    transition: transform 0.2s ease !important;
+}
+
+
+.de-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.de-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.de-modal-content button {
+    background-color: #5068E2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.de-modal-content button:hover {
+    background-color: #3949ab;
+}
+
+@media (max-width: 768px) {
+
+    .de-table th,
+    .de-table td {
+        padding: 8px 10px;
+    }
+}

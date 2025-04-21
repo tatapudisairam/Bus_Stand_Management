@@ -1,0 +1,335 @@
+.assign-main-container {
+    font-family: Arial, sans-serif;
+    background-color: #ececf4;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.assign-upsection {
+    display: flex;
+    gap: 350px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    opacity: 0.9;
+    background-color: #ececf4;
+}
+
+.assign-upsection-inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    font-family: Poppins;
+    color: #000000FF;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.assign-upsection-inner p {
+    margin: 0;
+}
+
+.assign-upsection-inner .assign-busstand {
+    font-size: 20px;
+}
+
+.assign-downsection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 30px;
+    overflow-y: auto;
+}
+
+.assign-grid-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    padding: 14px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.assign-grid-item:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.assign-grid-item .assign-title {
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #1A1A1AFF;
+}
+
+.assign-grid-item .assign-description {
+    font-family: Poppins;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(53, 50, 50);
+}
+
+.assign-no-bus-details {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    grid-column: span 3;
+}
+
+.assign-home-icon {
+    cursor: pointer;
+    color: #5068E2;
+}
+
+.assign-home-icon:hover {
+    opacity: 0.8;
+}
+
+.assign-btn {
+    background-color: #5068E2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: auto;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: flex-start;
+    width: auto;
+}
+
+.assign-btn:hover {
+    background-color: #394bb8;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.popup-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.assignment-popup {
+    display: flex;
+    flex-direction: column;
+}
+
+.assignment-info {
+    margin-bottom: 10px;
+}
+
+.assignment-staff {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.assignment-staff h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.popup-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+
+.remove-btn {
+    background-color: #e25050;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    flex: 1;
+}
+
+.remove-btn:hover {
+    background-color: #b83939;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-btn,
+.close-btn {
+    background-color: #5068E2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    flex: 1;
+}
+
+.add-btn:hover,
+.close-btn:hover {
+    background-color: #394bb8;
+}
+
+
+.add-btn-disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    border: 1px solid #999999 !important;
+}
+
+.add-btn {
+    background-color: #5068E2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover:not(:disabled) {
+    background-color: #394bb8;
+}
+
+.assign-assigned-text {
+    color: green;
+    font-weight: bold;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.assign-assigned-text:hover {
+    text-decoration: underline;
+}
+
+
+.edit-btn {
+    background-color: #e2a950;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    flex: 1;
+}
+
+.edit-btn:hover {
+    background-color: #b88839;
+}
+
+
+@media (max-width: 480px) {
+    .popup-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .assign-downsection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .assign-upsection {
+        gap: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .assign-downsection {
+        grid-template-columns: 1fr;
+    }
+
+    .assign-grid-item .assign-title {
+        font-size: 16px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

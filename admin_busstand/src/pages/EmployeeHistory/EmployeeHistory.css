@@ -1,0 +1,204 @@
+.aes-employee-history-container {
+    padding: 20px;
+    background-color: #ececf4;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.aes-employee-inner-container {
+    display: flex;
+    gap: 330px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    opacity: 0.9;
+    background-color: #ececf4;
+}
+
+.aes-home-icon {
+    cursor: pointer;
+    color: #5068E2;
+}
+
+.aes-home-icon:hover {
+    opacity: 0.8;
+}
+
+
+.aes-header {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.aes-employee-selection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.aes-employee-selection label {
+    font-weight: bold;
+}
+
+.aes-employee-selection select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.aes-display-button {
+    padding: 8px 16px;
+    background-color: #5068E2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.aes-display-button:hover {
+    background-color: #3949ab;
+}
+
+.aes-error-message {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.aes-history-container {
+    margin-top: 20px;
+}
+
+.aes-history-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aes-history-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 250px;
+    min-width: 250px;
+}
+
+.aes-history-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.aes-history-card h3 {
+    color: #5068E2;
+    margin-bottom: 5px;
+}
+
+.aes-history-card p {
+    margin: 2px 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+    .aes-history-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .aes-history-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aes-employee-inner-container {
+        gap: 80px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .aes-history-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aes-employee-inner-container {
+        gap: 40px;
+    }
+}
+
+
+.aes-filter-options {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+}
+
+.aes-filter-text {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+}
+
+.aes-filter-text:hover {
+    color: #3949ab;
+}
+
+.aes-active-filter {
+    color: #5068E2;
+    text-decoration: underline;
+}
+
+.aes-filter-icon {
+    font-size: inherit;
+    color: inherit;
+}
+
+
+.aes-custom-filter {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.aes-custom-filter input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
+}
+
+.aes-apply-filter-button {
+    padding: 8px 16px;
+    background-color: #5068E2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.aes-apply-filter-button:hover {
+    background-color: #3949ab;
+}

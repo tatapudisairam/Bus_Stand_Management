@@ -1,0 +1,188 @@
+.ed-employee-dashboard-container {
+    height: 100vh;
+    padding: 40px 20px;
+    background-color: #ececf4;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.ed-e-header {
+    margin-bottom: 30px;
+}
+
+.ed-e-header h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+}
+
+.ed-e-header p {
+    font-size: 18px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.ed-grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.ed-grid-item {
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333;
+    font-weight: bold;
+}
+
+.ed-grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    background-color: #f1f1f1;
+}
+
+.ed-grid-item h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .ed-grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    animation: fadeIn 0.5s;
+    border: 2px solid #5068E2;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #5068E2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background: #3d4ab2;
+}
+
+.schedule-title {
+    color: #5068E2;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.schedule-details {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.schedule-card {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 0;
+}
+
+
+.schedule-card p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.ed-route-popup {
+    color: #5068E2;
+}
+
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .close-btn {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+
+    .schedule-title {
+        font-size: 18px;
+    }
+
+    .schedule-card p {
+        font-size: 13px;
+    }
+}

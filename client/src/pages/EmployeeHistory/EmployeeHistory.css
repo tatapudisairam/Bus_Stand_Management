@@ -1,0 +1,62 @@
+.oeh-employee-history-container {
+    padding: 20px;
+    background-color: #ececf4;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.oeh-home-icon {
+    padding-top: 20px;
+    color: #5068E2;
+    cursor: pointer;
+}
+
+.oeh-home-icon:hover {
+    opacity: 0.8;
+}
+
+
+.oeh-employee-history-container h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.oeh-history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.oeh-history-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: left;
+}
+
+.oeh-history-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.oeh-history-card h3 {
+    color: #5068E2;
+    margin-bottom: 10px;
+}
+
+.oeh-history-card p {
+    margin: 5px 0;
+    color: #555;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .oeh-history-grid {
+        grid-template-columns: 1fr;
+    }
+}

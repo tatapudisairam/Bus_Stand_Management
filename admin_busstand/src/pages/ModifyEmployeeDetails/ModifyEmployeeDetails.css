@@ -1,0 +1,207 @@
+.me-main-container {
+    background-color: #ececf4;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+}
+
+.me-home-icon {
+    cursor: pointer;
+    color: #5068E2;
+    line-height: 66px;
+}
+
+.me-home-icon:hover {
+    opacity: 0.8;
+}
+
+.me-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.me-table th,
+.me-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.me-table th {
+    background-color: #e2e2e2;
+    font-weight: bold;
+}
+
+.me-table tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+/* New Edit Button */
+.me-edit-button {
+    background-color: #5068E2;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.me-edit-button:hover {
+    background-color: #3949ab;
+}
+
+/* Action Column */
+.me-table th:last-child,
+.me-table td:last-child {
+    text-align: center;
+    width: 100px;
+}
+
+.me-search-filter-sort-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.me-search-input,
+.me-job-filter {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    min-width: 150px;
+}
+
+.me-search-input:focus,
+.me-job-filter:focus {
+    border-color: #5068E2;
+    box-shadow: 0 0 5px rgba(80, 104, 226, 0.5);
+}
+
+.me-sort-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.me-sort-buttons button {
+    background-color: #5068E2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    min-width: 130px;
+}
+
+.me-sort-buttons button:hover {
+    background-color: #3949ab;
+}
+
+.MuiPaginationItem-root {
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #5068E2;
+    color: white;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.MuiPaginationItem-root:hover {
+    background-color: #3949ab;
+}
+
+.Mui-selected {
+    background-color: #3949ab !important;
+    color: white !important;
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.me-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.me-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.me-modal-content button {
+    background: #5068E2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 5px;
+}
+
+.me-modal-content button:hover {
+    background: #3949ab;
+}
+
+.me-employee-details {
+    background-color: #f3f4fb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.me-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.me-edit-form input,
+.me-edit-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: auto;
+}
+
+.me-edit-form input:focus,
+.me-edit-form select:focus {
+    border-color: #5068E2;
+    box-shadow: 0 0 5px rgba(80, 104, 226, 0.5);
+}
+
+
+@media (max-width: 768px) {
+
+    .me-table th,
+    .me-table td {
+        padding: 8px 10px;
+    }
+}

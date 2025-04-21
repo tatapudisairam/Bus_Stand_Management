@@ -1,0 +1,479 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #fbfbff;
+}
+
+.navbar-container {
+    position: sticky;
+    top: 0;
+}
+
+.navbar-container .navbar-options a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    overflow: hidden;
+    height: 5vh;
+    background-color: white;
+    padding: 10px 100px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1F;
+    z-index: 1000;
+    opacity: 0.9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.left-navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.left-navbar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.left-navbar ul li {
+    cursor: pointer;
+}
+
+.left-navbar ul li:hover {
+    color: #5068E2FF;
+}
+
+.right-navbar {
+    display: flex;
+    gap: 8px;
+}
+
+.right-navbar .loginlogout,
+.main-container .loginlogout {
+    background-color: white;
+    border: 2px solid #5068E2FF;
+    color: #5068E2FF;
+}
+
+
+.right-navbar .loginlogout:hover,
+.main-container .loginlogout:hover {
+    color: white;
+    background-color: #5068E2FF;
+}
+
+.right-navbar a,
+.btn-main a {
+    padding: 5px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #5068E2FF;
+    opacity: 1;
+    border: none;
+    border-radius: 4px;
+    gap: 6px;
+    text-decoration: none;
+}
+
+
+.right-navbar a:hover,
+.btn-main a:hover {
+    color: #FFFFFFFF;
+    background: rgb(45, 72, 206);
+}
+
+
+
+.main-container {
+    background-image: url("main_img_5.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+    align-items: center;
+    color: white;
+    text-shadow: 0px 0px 40px rgba(20, 19, 19, 0.8);
+}
+
+.main-container-contain {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 50px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.main-container .title {
+    width: 600px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.btn-main {
+    display: flex;
+    gap: 10px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.acc-title {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+}
+
+.accordion {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: white;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: #f8fafc;
+}
+
+.accordion-title {
+    font-weight: 500;
+    color: #2d3748;
+    font-size: 1rem;
+}
+
+.accordion-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+    content: "";
+    position: absolute;
+    background: #64748b;
+    border-radius: 1px;
+    transition: transform 0.4s ease;
+}
+
+.accordion-icon::before {
+    width: 12px;
+    height: 2px;
+}
+
+.accordion-icon::after {
+    width: 2px;
+    height: 12px;
+}
+
+.accordion-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.98s ease-in-out, opacity 0.5s ease-in-out;
+    background: white;
+}
+
+.accordion-body {
+    padding: 0 1.25rem 1rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+    background: #e2e8f0;
+}
+
+.accordion-item.active .accordion-header {
+    background: #f8fafc;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.accordion-content.active {
+    animation: slideDown 0.6s ease-out;
+}
+
+
+footer {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+
+.top-footer-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.search-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.input-container {
+    display: flex;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 160px;
+    background-color: white;
+    padding-left: 10px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+
+.search-button {
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.middle-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #424242;
+    box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1F;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.middle-footer ul {
+    list-style-type: none;
+}
+
+.footer-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.middle-footer li {
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+.footer-hr {
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #424242;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer-hr .hr-line {
+    width: 72%;
+}
+
+.bottom-footer {
+    font-size: 17px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #424242;
+    color: white;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.social-icons i {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1000px) {
+    header {
+        padding: 10px 20px;
+    }
+
+
+}
+
+@media screen and (max-width:750px) {
+    .left-navbar .logo {
+        font-size: 18px;
+    }
+
+    a {
+        padding: 4px 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .left-navbar ul {
+        font-size: 15px;
+    }
+
+    .main-container .title {
+        width: 500px;
+        font-size: 40px;
+    }
+
+    .container {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width:671px) {
+    a {
+        padding: 4px 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .container {
+        max-width: 400px;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .main-container .title {
+        width: 400px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .main-container .title {
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 300px;
+    }
+
+    .middle-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-content {
+        padding-left: 15px;
+    }
+}

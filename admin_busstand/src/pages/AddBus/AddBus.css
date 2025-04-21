@@ -1,0 +1,123 @@
+.ab-main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+    background-color: #ececf4;
+}
+
+.ab-home-icon {
+    cursor: pointer;
+    color: #5068E2;
+}
+
+.ab-home-icon:hover {
+    opacity: 0.8;
+}
+
+.ab-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+    height: 450px;
+    background-color: #FFFFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.ab-inner-container {
+    display: flex;
+}
+
+.ab-inner-left-container {
+    margin: 0px 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.ab-container p {
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #171A1FFF;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ab-input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    background: #F3F4F6FF;
+    padding: 4px 12px;
+    font-family: Roboto;
+    font-weight: 400;
+    border-radius: 2px;
+    outline: none;
+    margin: 3px 0;
+}
+
+.ab-input-div label {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.ab-input-div input {
+    font-size: 15px;
+    border: none;
+    background-color: #F3F4F6FF;
+}
+
+.ab-input-div input:focus {
+    outline: none;
+    color: rgb(37, 38, 40);
+}
+
+.ab-btn-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ab-btn-create .ab-btn {
+    cursor: pointer;
+    width: 70%;
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #5068E2FF;
+    opacity: 1;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0px 8px 17px #5068E226, 0px 0px 2px #5068E21F;
+    margin-top: 30px;
+}
+
+.ab-btn:hover {
+    background: #3753DEFF;
+}
+
+.ab-btn:hover:active {
+    background: rgb(30, 60, 209);
+}
+
+.ab-mid-line {
+    width: 0.1rem;
+    background-color: #5068E2FF;
+    height: 100%;
+}
